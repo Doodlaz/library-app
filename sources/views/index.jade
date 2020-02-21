@@ -1,0 +1,20 @@
+-
+	var page = 'book-list';
+
+doctype html
+html(lang="en")
+	head
+		include ./partials/global/head
+	body(class=page+'-page')
+		include ./partials/global/sprite
+
+		.global-wrap
+			include ./partials/global/header
+
+			main
+				section.book-list
+					.container
+						.row#bookList
+
+		include ./partials/global/scripts
+

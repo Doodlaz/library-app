@@ -1,0 +1,22 @@
+.header {
+  @extend %l_flex--align-center;
+  height: 60px;
+  border-bottom: 1px solid $primary-extralight;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  @extend %l_flex--align-center;
+  font-weight: $weight-bold;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+}

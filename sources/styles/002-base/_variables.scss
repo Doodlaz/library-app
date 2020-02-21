@@ -1,0 +1,54 @@
+//-----------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------
+
+// Colors
+//
+// EXAMPLE:
+// background: color('grey', 100);
+// color: color('grey');
+
+$colors: (
+	'grey': (),
+	'red': (),
+	'blue': (),
+	'green': (),
+);
+
+////
+
+$primary: #333;
+$primary-light: #666;
+$primary-extralight : #999;
+//-------------------------------------------------
+
+// Fonts
+$arial-sans: Arial, sans-serif;
+$natoSansReg: 'nato-sans', $arial-sans;
+$natoSansBold: 'nato-sans-bold', $arial-sans;
+$natoSansItal: 'nato-sans-italic', $arial-sans;
+
+////
+
+$weight-thin: 100;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-black: 900;
+//-------------------------------------------------
+
+// Break points
+$sm: 320;
+$sm-roomy: 375;
+$md: 760;
+$lg: 980;
+$xl: 1280;
+$xxl: 1400;
+$xxxl: 1920;
+//-------------------------------------------------
+
+// MISC
+$transition-time: 0.3s;
+//-------------------------------------------------

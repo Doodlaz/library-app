@@ -1,0 +1,162 @@
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: all $transition-time;
+  outline: none;
+  .mobile-device &{
+    cursor: default;
+  }
+  @include mq(767, max) {
+    cursor: default;
+  }
+}
+h1,
+.t_h1 {
+  @include font-size(36);
+  @extend %t_bold;
+}
+h2,
+.t_h2 {
+  @include font-size(30);
+}
+h3,
+.t_h3 {
+  @extend %font-size-32;
+}
+h4,
+.t_h4 {
+  @extend %font-size-24;
+}
+h5,
+.t_h5 {
+	@extend %font-size-18;
+}
+h6,
+.t_h6 {
+	@include font-size(6);
+}
+
+.l-title-h1{
+  @extend %font-size-48;
+}
+.l-title-h2{
+  @extend %font-size-40;
+}
+.l-title-h3{
+  @extend %font-size-32;
+}
+.l-title-h4{
+  @extend %font-size-24;
+  font-weight: $weight-bold;
+}
+.l-title-h5{
+  @extend %font-size-16;
+}
+.l-title-h6{
+  @include font-size(8);
+}
+
+%font-size-10{
+    @include font-size(10);
+}
+%font-size-12{
+    @include font-size(12);
+}
+%font-size-14{
+    @include font-size(14);
+}
+%font-size-16{
+	@include font-size(16);
+}
+%font-size-18{
+  @media (min-width: 768px) {
+    @include font-size(18);
+  }
+}
+%font-size-20{
+	@include font-size(20);
+}
+%font-size-22{
+    @include font-size(22);
+}
+%font-size-24{
+	@include font-size(24);
+}
+%font-size-26{
+  @include font-size(26);
+}
+%font-size-28{
+  @include font-size(28);
+}
+%font-size-32{
+  @include font-size(22);
+  @extend %t_bold;
+  @media (min-width: 768px) {
+    @include font-size(32);
+  }
+}
+%font-size-36{
+  @include font-size(20);
+  @extend %t_bold;
+  @media (min-width: 768px) {
+    @include font-size(36);
+  }
+}
+%font-size-40{
+	@include font-size(22);
+  @media (min-width: 768px) {
+    @include font-size(40);
+  }
+}
+%font-size-44{
+    @include font-size(44);
+}
+%font-size-48{
+  @include font-size(24);
+  @extend %t_bold;
+  @media (min-width: 768px) {
+    @include font-size(48);
+  }
+}
+
+%t_color--white { color: white; }
+%t_color--black { color: black; }
+
+%t_text-transform--uppercase { text-transform: uppercase; }
+%t_text-transform--none { text-transform: none; }
+%t_text-align--center { text-align: center; }
+%t_text-align--left { text-align: left; }
+%t_text-align--right { text-align: right; }
+
+%t_bold{
+  font-weight: $weight-bold;
+}
+.t_bold{
+  @extend %t_bold;
+}
+
+.maincolor{
+  color: color('red', 'main');
+}
+.errorcolor{
+  color: color('red', 'error');
+}
+a.maincolor:hover{
+  @include mq(1024) {
+    color: color('red', 'error');
+  }
+}
+button.errorcolor:hover,
+a.errorcolor:hover{
+  @include mq(1024) {
+    color: color('red', 'main');
+  }
+}
+.dark{
+  color: $primary;
+  font-weight: $weight-bold;
+}
+
+b{
+  @extend %t_bold;
+}

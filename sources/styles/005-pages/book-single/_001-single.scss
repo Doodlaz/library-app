@@ -1,0 +1,23 @@
+.book-single {
+
+}
+
+.edit-book {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &__item {
+    height: 32px;
+    background-color: #fafafa;
+    box-shadow: none;
+    width: 100%;
+    padding: 7px 12px;
+    color: #000;
+    transition: .3s;
+    border: 1px solid $primary-extralight;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    @include font-size(14)
+  }
+}

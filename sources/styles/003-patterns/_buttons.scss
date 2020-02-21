@@ -1,0 +1,27 @@
+.btn {
+  display: flex;
+  padding: 0 32px;
+  height: 32px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all .3s;
+  font-weight: 700;
+  outline: none;
+
+  &_white{
+    color: $primary;
+    border: 1px solid $primary-extralight;
+    background-color: #fff;
+
+    &:hover{
+      background-color: #EBEDF0;
+    }
+    &:focus,
+    &:active {
+      color: $primary;
+    }
+  }
+
+}
