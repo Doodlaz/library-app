@@ -2,12 +2,17 @@ import { state } from './state'
 
 let books = []
 
-export async function bookList() {
+export function bookList() {
   const list = document.getElementById('bookList')
 
-  await state.getBooks().then(res => books = res)
+  state.getBooks().then(res => {
+    books = res
+    list && books.map(item => {
+      listCreate(item)
+    })
+  })
 
-  if (list) await state.getBookSingleClear()
+  if (list) state.getBookSingleClear()
 
   const listCreate = item => {
     const col = document.createElement('div')
@@ -52,7 +57,4 @@ export async function bookList() {
     list.appendChild(col)
   }
 
-  list && books.map(item => {
-    listCreate(item)
-  })
 }

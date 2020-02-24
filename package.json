@@ -4,7 +4,9 @@
   "description": "library-app description",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "start": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean"
   },
   "author": "doodlaz@gmail.com",
   "license": "ISC",

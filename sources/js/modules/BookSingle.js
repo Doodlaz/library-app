@@ -14,11 +14,14 @@ let emptyBook = {
   heading: '',
 }
 
-export async function bookSingle() {
+export function bookSingle() {
 
-  await state.getBookSingle().then( res => book = res ? res : emptyBook )
+  state.getBookSingle().then( res => {
+    book = res ? res : emptyBook
+    single && singleCreate(book)
+  } )
 
-  await state.getBooks().then( res => books = res )
+  state.getBooks().then( res => books = res )
 
   const single = document.getElementById('bookSingle')
 
@@ -41,14 +44,10 @@ export async function bookSingle() {
     }
   }
 
-  if (single) {
-
-
-
+  const singleCreate = book => {
     const formEdit = document.getElementById('formEdit')
     const formCreate = document.getElementById('formCreate')
     const bookImg = document.getElementById('bookImg')
-
     const title = document.getElementById('title')
     const authors = document.getElementById('authors')
     const publishingDate = document.getElementById('publishingDate')
@@ -84,7 +83,8 @@ export async function bookSingle() {
       state.setBookSingle( newBook( randomId() ) )
       state.setBooks( newBooks )
     })
-
   }
+
+
 
 }

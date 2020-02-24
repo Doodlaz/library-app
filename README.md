@@ -12,10 +12,10 @@ npm install
 yarn
 
 #build markup
-gulp build
+npm run build
 
 # start the server with watcher
-gulp
+npm run start
 # go to http://localhost:3000 in your browser
 
 ```
